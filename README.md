@@ -45,5 +45,4 @@ Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 - Vite
 - Redux (if applicable)
 
-## License
-This project is licensed under the MIT License.
+
