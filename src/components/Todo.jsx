@@ -2,9 +2,7 @@
 // Todo: Main component for displaying and managing tasks
 import { useSelector } from "react-redux";
 import AddForm from "./AddForm";
-import EditTask from "./EditTask";
-import DeleteTask from "./DeleteTask";
-import DoneTask from "./DoneTask";
+import Buttons from "./Buttons";
 import UpDateTask from "./UpDateTask";
 import AllComplete from "./AllComplete";
 
@@ -34,9 +32,9 @@ function Todo() {
                       {todo.task}
                     </div>
                     <div className='btns'>
-                      <DoneTask todo={todo} />
-                      <DeleteTask id={todo.id} />
-                      <EditTask id={todo.id} />
+                      <Buttons todo={todo} text={todo.complete ? 'Undo' : 'Done'} />
+                      <Buttons todo={todo} text={"Delete"}/>
+                      <Buttons todo={todo} text={"Edit"} />
                     </div>
                   </div>
                 )}

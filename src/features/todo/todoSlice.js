@@ -43,6 +43,7 @@ export const todoSlice = createSlice({
             if (todo) {
                 todo.task = newEditTask.trim().replace(/\s+/g, ' ');
                 todo.edit = false;
+                todo.complete = false;
             }
         },
         exitEditMode: (state, action) => {

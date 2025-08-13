@@ -24,7 +24,6 @@ function AddForm() {
   return (
     <div className="box">
       <form onSubmit={handleSubmit} className="addform-form">
-        <label htmlFor="new-task" className="addform-label"></label>
         <input
           id="new-task"
           className="inp addform-input"
@@ -35,7 +34,7 @@ function AddForm() {
           autoComplete="off"
           maxLength={50}
         />
-        <button type="submit" className="addform-btn" disabled={!newTask.trim()}>
+        <button type="submit" className="addform-btn">
           Add Task
         </button>
       </form>

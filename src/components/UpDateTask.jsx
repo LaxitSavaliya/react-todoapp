@@ -47,7 +47,6 @@ function UpDateTask({ todo }) {
       <div className="btns updatetask-btns">
         <button
           onClick={handleEditTask}
-          disabled={newEditTask.trim().replace(/\s+/g, " ") === todo.task}
           className="updatetask-btn"
         >
           Update
