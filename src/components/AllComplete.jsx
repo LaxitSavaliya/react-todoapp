@@ -8,7 +8,7 @@ function AllComplete({ todos }) {
         dispatch(toggleAllComplete())
     }
 
-    if (todos.length === 0) return null; // no tasks, no button
+    if (todos.length === 0) return null;
 
     const allDone = todos.every(todo => todo.complete);
 

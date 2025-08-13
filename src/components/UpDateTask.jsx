@@ -1,5 +1,4 @@
 
-// UpDateTask: Form for editing an existing task
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateTask, exitEditMode, deleteTask } from "../features/todo/todoSlice";
@@ -8,13 +7,11 @@ function UpDateTask({ todo }) {
   const [newEditTask, setNewEditTask] = useState(todo.task);
   const dispatch = useDispatch();
 
-  // Cancel editing
   const handleCancel = () => {
     dispatch(exitEditMode(todo.id));
     setNewEditTask("");
   };
 
-  // Save edited task or delete if empty
   const handleEditTask = () => {
     const cleanedTask = newEditTask.trim().replace(/\s+/g, " ");
     if (cleanedTask !== "") {

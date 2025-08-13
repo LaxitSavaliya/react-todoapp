@@ -1,5 +1,4 @@
 
-// Todo: Main component for displaying and managing tasks
 import { useSelector } from "react-redux";
 import AddForm from "./AddForm";
 import Buttons from "./Buttons";
@@ -7,7 +6,6 @@ import UpDateTask from "./UpDateTask";
 import AllComplete from "./AllComplete";
 
 function Todo() {
-  // Get todos from Redux store
   const todos = useSelector((state) => state.todos);
 
   return (

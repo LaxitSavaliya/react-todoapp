@@ -1,5 +1,3 @@
-
-// AddForm: Form for adding new tasks
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNewTask } from "../features/todo/todoSlice";
@@ -8,7 +6,6 @@ function AddForm() {
   const [newTask, setNewTask] = useState("");
   const dispatch = useDispatch();
 
-  // Handle form submission
   const handleSubmit = (evt) => {
     evt.preventDefault();
     const taskText = newTask.trim().replace(/\s+/g, " ");
